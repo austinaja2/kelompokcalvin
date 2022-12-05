@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/jobstyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" integrity="sha512-eMxdaSf5XW3ZW1wZCrWItO2jZ7A9FhuZfjVdztr7ZsKNOmt6TUMTQgfpNoVRyfPE5S9BC0A4suXzsGSrAOWcoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <title>Find Jobs</title>
+    </head>
+  
+    <body>
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><span class="logo" style="color: black;">Freelancing</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" href="findjobs.html">Find Jobs<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="index.html">How It Works</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <nav class="navbar navbar-expand-lg px-lg-5" style="background-color: #fe4066;">
+            <div class="Grid-col Grid-col--12 Grid-col--desktopSmall-6 Grid-col--desktopLarge-7">
+                <ul class="navbar-nav"><h1 style="color: white;">TOP JOBS</h1></ul>
+            </div>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <p></p>
+                </ul>
+                <div class="Grid-col Grid-col--12 Grid-col--desktopSmall-6 Grid-col--desktopLarge-5 PageJobs-sectionHero-ctas">
+                    <a href="findfreelancers.html" class="btn btn-primary-outline PageJobs-sectionHero-cta">I want to Hire</a>
+                    <a href="findjobs.html"><button class="btn btn-primary-outline PageJobs-sectionHero-cta">I want to Work</button></a>
+                </div>
+            </div>
+        </nav>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <form class="container-fluid">
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Search keyword" aria-label="Search" aria-describedby="basic-addon1">
+                    <select class="custom-select" id="inputjob" aria-label="jobtype">
+                        <option selected>Choose...</option>
+                        <option value="1">Online Job</option>
+                        <option value="2">Offline Job</option>
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary-outline" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </nav>
+
+        <br>
+
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center" style="margin: 20px;">
+                <div class="border-right col-md">
+                    <div>
+                        <header>
+                            <h3>Budget</h3>
+                            <input type="checkbox" id="job" name="job" value="fixedprice">
+                            <label for="fixedprice">Fixed price project</label><br>
+                        </header>
+                        <div class="price-input">
+                            <div class="field">
+                                <span>Min</span>
+                                <input type="number" class="input-min" value="2500">
+                            </div>
+                            <div class="separator">-</div>
+                            <div class="field">
+                                <span>Max</span>
+                                <input type="number" class="input-max" value="7500">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                            <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                        </div>
+                        <br>
+                        <header>
+                            <input type="checkbox" id="job" name="job" value="hourlyprojects">
+                            <label for="hourlyprojects">Hourly Projects</label><br>
+                        </header>
+                        <select class="custom-select" id="duration" aria-label="duration">
+                            <option selected>All Duration</option>
+                            <option value="1">Less than 1 week</option>
+                            <option value="2">1 week to 4 weeks</option>
+                            <option value="3">1 month to 3 months</option>
+                            <option value="4">3 months to 6 months</option>
+                            <option value="5">over 6 months/ongoing</option>
+                            <option value="6">unspecified</option>
+                        </select>
+                        <br>
+                    </div>
+                    <br><div>
+                        <div class="border-bottom">
+                            <h3>Type</h3>
+                            <input type="checkbox" id="typejob" name="local" value="local">
+                            <label for="fixedprice">Local Jobs</label><br>
+                            <input type="checkbox" id="typejob" name="featured" value="featured">
+                            <label for="fixedprice">Featured Jobs</label><br>
+                            <input type="checkbox" id="typejob" name="recruiter" value="recruiter">
+                            <label for="fixedprice">Recruiter Jobs</label><br>
+                            <input type="checkbox" id="typejob" name="fulltime" value="fulltime">
+                            <label for="fixedprice">Full Time Jobs</label><br>
+                        </div>
+                        <br>
+                        <div class="border-bottom">
+                            <h3>Skills</h3>
+                            <input type="checkbox" id="typeskills" name="net5.0/6" value="net5.0/6">
+                            <label for="fixedprice">.NET 5.0/6</label><br>
+                            <input type="checkbox" id="typeskills" name="net" value="net">
+                            <label for="fixedprice">.NET</label><br>
+                            <input type="checkbox" id="typeskills" name="php" value="php">
+                            <label for="fixedprice">PHP</label><br>
+                            <input type="checkbox" id="typeskills" name="css" value="css">
+                            <label for="fixedprice">CSS</label><br>
+    
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="or enter skills" aria-label="or enter skills" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="buttonskills"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <br>
+                        <div class="border-bottom">
+                            <h3>Languages</h3>
+                            <input type="checkbox" id="languages" name="english" value="english">
+                            <label for="fixedprice">English</label><br>
+                            <input type="checkbox" id="languages" name="spanish" value="spanish">
+                            <label for="fixedprice">Spanish</label><br>
+                            <input type="checkbox" id="languages" name="german" value="german">
+                            <label for="fixedprice">German</label><br>
+                            <input type="checkbox" id="languages" name="french" value="french">
+                            <label for="fixedprice">French</label><br>
+                            <input type="checkbox" id="languages" name="portuguese" value="portuguese">
+                            <label for="fixedprice">Portuguese</label><br>
+    
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="or enter languages" aria-label="or enter languages" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="buttonlanguages"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+               <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Logo Design</h2>
+                            <p>This logo is for a software service called "Parent solution" or shortly "PSol" the main goal of this service is to help parents in controlling what theire childrent (students) are doing at school. This is a remote control, the parents get messages instantly via veriouse channel (SMS, WhatsApp, Email, ...) when theire child miss a course or get an evaluation results.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$10-$30</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Website Design and development</h2>
+                            <p>Join a talented and motivated team to develop and design a high-end website based. We need a custom website designed and developed from scratch. We will provide you the brand assets and website copy. We need five pages website (Home, about us, pricing, services, and contact) with some pop ups. We need a custom website designed in XD, figma or angular backend developed in php. We are not building it in CMS because we plan to create web application later on. The package should include unlimited number of revisions with ongoing support after project and the project should be completed in 15-20 days. Send me your offer with portfolio and we will move forward and discuss it further. Thanks</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$30-$40/Hour</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Product Package Design</h2>
+                            <p>I need to create a product label and package design. Our product is a potato snack with many flavour. It's a new product launch which is the best flavour that our product made and I hope someone can make the package as interesting as the taste.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$70</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Mobile App (Android and IOS)</h2>
+                            <p>When user install our app should upload the mobile number of user, name of contacts available in his/her mobile and respective mobile number of such contacts. Every user of app should be identified by an unique ID and the contacts should be updated when a new contact is added or a contact is edited. The app should be free from any bugs/crashing issues.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$10-$20/Hour</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Instagram and Canva Designer</h2>
+                            <p>Seeking a graphic designer who can work on Instagram and Canva projects. We are currently rebranding with new social media pages so basically starting from scratch. I have attached some ideas around what our initial requirements are then a list of ideas for posts in future.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$7/Hour</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>PHP Developer to build our backend and frontend Project</h2>
+                            <p>Hi, we are seeking an experienced, reliable and trustworthy php full stack developer to craft the backend part of our website and make it all work great. We have written a project brief document to help better explain our project and what you will be responsible for in the backed. But we will build the frontend pages + landing pages and supply you with a complete backend admin template we are buying which is built using Bootstrap 5 Framework, HTML5, CSS and JQuery. So we need an experienced developer to build our platform backend from scratch.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$1500</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Illustrator for Corporate HR Cartoon Art</h2>
+                            <p>Create illustrations from photo and clip art for Corporate Story Boards. 35 image, each image will be 5" wide x 4" high. Style: Corporate cartoon art with anime influence. Reference is 7 pictures for one of the storyboards</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$1900</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Help fix wordpresss many problems, need it now!</h2>
+                            <p>wordpress failed when reverting back ups, wordpress theme and woo commerce not working properly with gz files and front end problem, wordpress website is slow and image not showing properly. I want someone who is quick , problem oriented, fix and next attitude. Need to work now.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$15/Hour</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>3D hi-res movie title for Logo with sound</h2>
+                            <p>I have a logo which I wanna make a 3D hi-res movie title for Logo with sound. I will provide u with the 2D AI file. Please send me your past portfolio. I want impactful sound with a bang.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$75</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Children's Book Author</h2>
+                            <p>I am looking for a creative writer to help me write a short story - biography form for my future child. Both of my parents have passed away unexpectedly and instead of waiting until they are older to tell them about their Grandparents, I would like to start when they are young by reading to them.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$17/Hour</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Unity mobile game Paytm payment gateway (Pay-in and pay-outs)</h2>
+                            <p>Need someone who can add pay in pay outs for a unity game (android). People should be able to add money to game using paytm wallet and people should be able to withdraw money from game wallet. (withdrawl process should be automatic)</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$80</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Illustrator Needed!</h2>
+                            <p>We need the service of an artist or illustrator/cartoonist/animator to work on a project for an upcoming children workshop, I'll give the idea of what I need to be illustrated/drawn for printed material and social content. Please get back to me for more details.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$8420</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                   <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Simple React frontend with placeholders</h2>
+                            <p>Looking to have somebody build out a very simple 3 page react frontend that uses the React hooks and contexts, react Router for navigation, firebase sdk for basic login/logout auth. The attached pdf file provides a basic mockup that shows the three pages being requested.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$400</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Graphic Designer for Social Media Posts</h2>
+                            <p>Freelancing is looking for a Graphic Designer to design their social media posts. As a Graphic Designer you will be responsible for understanding the requirements and design briefs and deliver high-quality graphics. If you're a tech-savvy professional with interest in the latest trends in digital technologies, team Freelancing would like to meet you. </p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$100</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-9 border-bottom">
+                            <h2>Business card design</h2>
+                            <p>To make a business card design for a new business. The name of the company is Dura Inc, featured in developing Ai pillow and other Ai Home Furnishing products. The design should be creative, technical, stylish, fresh, innovative.</p>
+                        </div>
+                        <div class="col border-bottom">
+                            <h4>$40-$50</h4>
+                            <br>
+                            <a href="/jobs"><button class="btn btn-pink PageJobs-sectionHero-cta">Apply</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+        
+        <footer class="footer">
+            <%- include('../partials/_footer.ejs') %>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+        <script src="js/jobscript.js"></script>
+  
+    </body>
+</html>
